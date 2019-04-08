@@ -2,7 +2,7 @@
   <el-container>
     <el-header>
       <div class='el-form--inline'>
-        <el-select v-model="group" filterable clearable placeholder="运维组" size="large">
+        <el-select v-model="group" filterable clearable placeholder="运维组" class="select-header-width">
           <el-option
             v-for="item in groupList"
             :key="item.value"
@@ -11,7 +11,7 @@
           </el-option>
         </el-select>
         <label style="padding-right: 8px"></label>
-        <el-select v-model="sys" filterable clearable placeholder="系统" size="large">
+        <el-select v-model="sys" filterable clearable placeholder="系统" class="select-header-width">
           <el-option
             v-for="item in sysList"
             :key="item.value"
@@ -20,7 +20,7 @@
           </el-option>
         </el-select>
         <label style="padding-right: 8px"></label>
-        <el-select v-model="db" filterable clearable placeholder="数据库" size="large">
+        <el-select v-model="db" filterable clearable placeholder="数据库" class="select-header-width">
           <el-option
             v-for="item in dbList"
             :key="item.value"
@@ -29,7 +29,7 @@
           </el-option>
         </el-select>
         <label style="padding-right: 8px"></label>
-        <el-select v-model="label" filterable clearable placeholder="SQL标签" size="large">
+        <el-select v-model="label" filterable clearable placeholder="SQL标签" class="select-header-width">
           <el-option
             v-for="item in labelList"
             :key="item.value"
@@ -39,7 +39,7 @@
         </el-select>
         <i class="el-icon-circle-plus-outline" size="large"></i>
         <label style="padding-right: 40px"></label>
-        <el-select v-model="sql" filterable clearable placeholder="SQL语句" size="large">
+        <el-select v-model="sql" filterable clearable placeholder="SQL语句" class="select-header-width">
           <el-option
             v-for="item in sqlList"
             :key="item.value"
@@ -64,10 +64,11 @@
                 fixed="right"
                 type="primary"
                 @click="addTab(editableTabsValue2)"
+                v-buttonSize="100"
               >
                 新建SQL
               </el-button>
-              <el-select v-model="value" placeholder="批量导入" width="100px">
+              <el-select v-model="value" placeholder="批量导入" class="select-width">
                 <el-option
                   v-for="item in batchInList"
                   :key="item.value"
@@ -75,7 +76,7 @@
                   :value="item.value">
                 </el-option>
               </el-select>
-              <el-select v-model="value" placeholder="批量导出" width="100px">
+              <el-select v-model="value" placeholder="批量导出" class="select-width">
                 <el-option
                   v-for="item in batchOutList"
                   :key="item.value"
@@ -139,6 +140,7 @@
   </el-container>
 </template>
 
+<script src="../router/index.js"></script>
 <script>export default {
   data () {
     return {
@@ -253,5 +255,10 @@
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-
+  .select-width {
+    width: 100px;
+  }
+  .select-header-width {
+    width: 275px;
+  }
 </style>
