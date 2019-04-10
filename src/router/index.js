@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import ManagerSQL from '@/components/ManagerSQL'
 import ExecuteSQL from '@/components/ExecuteSQL'
+import Test from '../components/Test'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
     {
       path: '/querysql',
       component: ExecuteSQL
+    },
+    {
+      path: '/test',
+      component: Test
     }
   ]
 })

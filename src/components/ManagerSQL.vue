@@ -64,7 +64,6 @@
                 fixed="right"
                 type="primary"
                 @click="addTab(editableTabsValue2)"
-                v-buttonSize="100"
               >
                 新建SQL
               </el-button>
