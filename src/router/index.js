@@ -5,6 +5,9 @@ import Router from 'vue-router'
 import ManagerSQL from '@/components/ManagerSQL'
 import ExecuteSQL from '@/components/ExecuteSQL'
 import Test from '../components/Test'
+import Parent from '../components/Parent'
+import Tab from '../components/Tab'
+import Header from '../components/Header'
 
 Vue.use(Router)
 
@@ -25,6 +28,18 @@ export default new Router({
     {
       path: '/test',
       component: Test
+    },
+    {
+      path: '/parent',
+      component: Parent
+    },
+    {
+      path: '/tab',
+      component: Tab
+    },
+    {
+      path: '/head',
+      component: Header
     }
   ]
 })

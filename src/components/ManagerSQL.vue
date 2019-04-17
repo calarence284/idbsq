@@ -139,7 +139,6 @@
   </el-container>
 </template>
 
-<script src="../router/index.js"></script>
 <script>export default {
   data () {
     return {
